@@ -1,0 +1,31 @@
+{
+	"name": "electron-p5-boilerplate",
+	"version": "1.0.0",
+	"description": "Electron boilerplate with p5.js",
+	"keywords": [
+		"electron"
+	],
+	"homepage": "https://github.com/remyroez/electron-p5-boilerplate#readme",
+	"bugs": {
+		"url": "https://github.com/remyroez/electron-p5-boilerplate/issues"
+	},
+	"license": "ISC",
+	"author": "remyroez",
+	"main": "main.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/remyroez/electron-p5-boilerplate.git"
+	},
+	"scripts": {
+		"start": "electron .",
+		"build": "electron-packager . --out=dist --asar --overwrite --all",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"dependencies": {
+		"p5": "^0.5.5"
+	},
+	"devDependencies": {
+		"electron": "^1.4.11",
+		"electron-packager": "^8.3.0"
+	}
+}
