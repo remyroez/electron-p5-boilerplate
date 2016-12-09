@@ -4,13 +4,19 @@
 		<meta charset="utf-8">
 		<title>electron-p5-boilerplate</title>
 		<script src='./sketch.js'></script>
-		<script>require('p5')</script>
-			<style>
+		<script>
+			var p5 = require('p5');
+			var app = new p5(sketch);
+		</script>
+		<style>
 			body {
 				margin: 0;
-				overflow: hidden;
+				padding: 0;
       			-webkit-app-region: drag;
       			-webkit-user-select: none;
+			}
+			canvas {
+				display: block;
 			}
 		</style>
 	</head>

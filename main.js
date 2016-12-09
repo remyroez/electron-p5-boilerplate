@@ -1,6 +1,12 @@
+'use strict';
+
 const electron = require('electron');
-const {app} = electron;
-const {BrowserWindow} = electron;
+const {app, BrowserWindow} = electron;
+const isDev = require('electron-is-dev');
+
+if (isDev) {
+	require('electron-reload')(__dirname);
+}
 
 let mainWindow;
 
@@ -16,8 +22,10 @@ function createWindow() {
 		}
 	);
 	mainWindow.loadURL(`file://${__dirname}/index.html`);
-	mainWindow.setMenu(null);
 	mainWindow.on('closed', () => { mainWindow = null; });
+	if (!isDev) {
+		mainWindow.setMenu(null);
+	}
 }
 
 app.on('ready', createWindow);
